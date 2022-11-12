@@ -1,0 +1,23 @@
+2.	Challenge moyen/difficile : (Mr Robot)
+
+A. Les étapes de création du challenge
+•	Création de deux machines debian.
+
+          B. Les étapes de résolution :
+•	Gobuster pour trouver flag1.txt et small-word-list.txt.
+•	Gobuster avec la nouvelle word-list pour accéder au site Wordpress.
+•	SQL Injection pour trouver le login et mdp(et un autre utilisateur : flag 2 comme login et Flag comme mdp)
+•	Trouver flag 3 dans la poubelle du site Wordpress.
+•	Modifier le thème de la page 404.php pour lancer un reverse Shell et accéder à la première machine.
+
+** Dans Machine 1 : 
+•	Trouver un fichier user1file.txt qui n’est pas exécutable que par user1 et qui contient flag 4 et le mdp de la deuxième machine(user1).
+•	Trouver un autre fichier backup-mdp.txt qui contient le mdp de user1 encodé(md5).
+•	Chercher dans known_hosts pour passer à la deuxième machine via SSH.
+
+** Dans Machine 2 : 
+•	Lire le contenu de crontab, un cron qui fait une sauvegarde de /home/user2(qui contient flag5.txt) vers un autre directory avec cp.
+•	Changer le cp(/bin/cp) vers notre cp(qui est une cat) pour lire le contenu du flag 5.
+•	Chercher un fichier dont le propriétaire est root et qui a “s” dans les droits d'accès.
+•	Le modifier avec vim pour accéder à un terminal en tant que root et chercher le dernier flag.
+
