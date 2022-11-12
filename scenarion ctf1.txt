@@ -1,0 +1,15 @@
+1.	Challenge facile:  Find Flag with Gobuster, command line and an Image.
+A.	Les étapes de création du challenge
+
+•	Création machine debian.
+•	Hoster server web
+•	Création d’un fichier txt contenant le premier FLG.
+•	Création d’une page contenante inputbox qui lance une commande. (la commande cat est désactivée, user trouve une autre méthode d’affichage).
+•	Insertion du 3eme flag dans une image.
+
+B.	Les étapes de résolution :
+
+•	Getting the target machine IP address.
+•	Gobuster pour trouver le premier flag.
+•	Utiliser la ligne de commandes pour trouver le deuxième flag sous   forme de fichier texte et le lire sans la commande cat.
+•	 Utiliser la ligne de commande pour trouver un fichier png qui contient flag 3 avec le chemin /home/user1.
