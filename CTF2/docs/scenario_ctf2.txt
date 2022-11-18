@@ -1,23 +1,31 @@
-2.	Challenge moyen/difficile : (Mr Robot)
+Challenge moyen/difficile : 
+a. Les étapes de création du challenge
+Création de deux machines 1 et 2:
+Machine 1 héberge un site web avec base de données et un site wordpress (WordPress est un système de gestion de contenus (CMS) permettant de créer son propre site assez facilement) que le développeur a oublié à le déhéberger. Le site web est vulnérable au SQL Injection et le site de blog partage le mot de passe de admin login avec le site, qui peut être piraté par SQLi. Dans la machine 1, nous cachons les flags de 1 à 3, et aussi l' information nécessaire pour accéder à la machine 2.
 
-A. Les étapes de création du challenge
-•	Création de deux machines debian.
+Machine 2 IP peut être obtenue dans le fichier known_hosts de Machine 1 avec mot de passe déchiffré. Dans cette machine, il existe plusieurs utilisateurs, respectivement existe le flag.
 
-          B. Les étapes de résolution :
-•	Gobuster pour trouver flag1.txt et small-word-list.txt.
-•	Gobuster avec la nouvelle word-list pour accéder au site Wordpress.
-•	SQL Injection pour trouver le login et mdp(et un autre utilisateur : flag 2 comme login et Flag comme mdp)
-•	Trouver flag 3 dans la poubelle du site Wordpress.
-•	Modifier le thème de la page 404.php pour lancer un reverse Shell et accéder à la première machine.
+          b. Les étapes de résolution:
+Reconnaissance: 
+Trouver flag1.txt et small-word-list.txt.
+Gobuster avec la nouvelle word-list pour accéder au site Wordpress.
+SQL Injection:
+Pour trouver le login et mdp(et un autre utilisateur : flag 2 comme login et Flag comme mdp).
+Wordpress:
+Trouver flag 3 dans la page admin du site Wordpress.
+Modifier le thème de la page 404.php pour lancer un reverse shell et accéder à la première machine.
 
 ** Dans Machine 1 : 
-•	Trouver un fichier user1file.txt qui n’est pas exécutable que par user1 et qui contient flag 4 et le mdp de la deuxième machine(user1).
-•	Trouver un autre fichier backup-mdp.txt qui contient le mdp de user1 encodé(md5).
-•	Chercher dans known_hosts pour passer à la deuxième machine via SSH.
+Trouver un fichier user1file.txt qui n’est accessible que par user1 et qui contient flag 4 et le mdp de la deuxième machine(user1).
+Trouver un autre fichier backup-mdp.txt qui contient le mdp de user1 hachage (md5).
+Chercher dans known_hosts pour passer à la deuxième machine via SSH.
 
 ** Dans Machine 2 : 
-•	Lire le contenu de crontab, un cron qui fait une sauvegarde de /home/user2(qui contient flag5.txt) vers un autre directory avec cp.
-•	Changer le cp(/bin/cp) vers notre cp(qui est une cat) pour lire le contenu du flag 5.
-•	Chercher un fichier dont le propriétaire est root et qui a “s” dans les droits d'accès.
-•	Le modifier avec vim pour accéder à un terminal en tant que root et chercher le dernier flag.
-
+Flag 5: User2
+Lire le contenu de crontab, un cron qui fait une sauvegarde de /home/user2/data(qui contient flag5.txt) vers une autre directory avec cp
+Modifier le PATH pour cp vers notre script cp(qui est une cat) pour lire le contenu du flag 5.
+		
+Flag 6: Root
+Chercher un fichier SUID pour droits d'accès.
+L' exploiter pour accéder à un terminal en tant que root et chercher le dernier flag.
+ (buffer overflow ).
