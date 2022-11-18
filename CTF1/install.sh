@@ -29,7 +29,7 @@ sudo systemctl start mongod
 sudo systemctl enable mongod
 sudo a2enmod proxy proxy_http rewrite headers expires
 sudo touch /etc/apache2/sites-available/tomygrpCmd.com.conf
-sudo echo <VirtualHost *:80> \ServerName example.com \ServerAlias www.example.com \ProxyRequests Off \ProxyPreserveHost On \ProxyVia Full \<Proxy *> \Require all granted \</Proxy> \ProxyPass / http://127.0.0.1:3000/ \ProxyPassReverse / http://127.0.0.1:30000/ \</VirtualHost> >> /etc/apache2/sites-available/example.com.conf
+sudo echo <VirtualHost *:80> \ServerName tomygrpCmd.com \ServerAlias www.tomygrpCmd.com \ProxyRequests Off \ProxyPreserveHost On \ProxyVia Full \<Proxy *> \Require all granted \</Proxy> \ProxyPass / http://127.0.0.1:3000/ \ProxyPassReverse / http://127.0.0.1:30000/ \</VirtualHost> >> /etc/apache2/sites-available/tomygrpCmd.com.conf
 sudo a2dissite 000-default
 sudo a2ensite example.com.conf
 sudo systemctl restart apache2
