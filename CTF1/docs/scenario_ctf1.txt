@@ -1,15 +1,23 @@
-1.	Challenge facile:  Find Flag with Gobuster, command line and an Image.
-A.	Les étapes de création du challenge
 
-•	Création machine debian.
-•	Hoster server web
-•	Création d’un fichier txt contenant le premier FLG.
-•	Création d’une page contenante inputbox qui lance une commande. (la commande cat est désactivée, user trouve une autre méthode d’affichage).
-•	Insertion du 3eme flag dans une image.
+Challenge facile: 
 
-B.	Les étapes de résolution :
+Web Directory Enumeration, Web Command Line and Steganography.
+1.1. Création du challenge: 
+Une machine avec server web qui contient les vulnérabilités:
+Hoster server web
+Création d’un fichier txt contenant le premier flag.
+Création d'une page login pour authentifier utilisateur pour test.php. 
+Création d'une page test.php contenant une inputbox qui reçoit une commande et renvoie le résultat sous forme de chaînes
+Insertion du 3eme flag dans une image.
+    	 
+	1.2. Les étapes de résolution: 
+		1.2.1. Le premier flag: Reconnaissance       			
+Découvrir le serveur Web, effectuer Web Directory numération, trouver le premier flag et la page test.php 
 
-•	Getting the target machine IP address.
-•	Gobuster pour trouver le premier flag.
-•	Utiliser la ligne de commandes pour trouver le deuxième flag sous   forme de fichier texte et le lire sans la commande cat.
-•	 Utiliser la ligne de commande pour trouver un fichier png qui contient flag 3 avec le chemin /home/user1.
+    1.2.2. Le deuxième flag: Brute Forcing login
+Brute Force le login et mot de passe dans le page login pour gagner d'accès de test.php été conçu par les développeurs pour des tests uniquement.
+Utiliser la ligne de commandes pour trouver le deuxième flag sous forme de fichier texte et le lire.
+
+    1.2.3. Le troisième flag:
+Utiliser la ligne de commande pour récupérer un fichier png qui cache le troisième flag avec le chemin /home/user1. 
+
