@@ -1,0 +1,25 @@
+Introduction :
+
+CTF (Capture The Flag) sont des challenges liés au domaine de la sécurité informatique. 
+La création de ces challenge est l'un des sujets proposés, comme projet en sécurité de 
+4a, par les professeurs afin de mettre à l’éprouve nos connaissances et compétences dans
+des domaines liés à la sécurité.
+
+Explication de ctf1 :
+      Dans la catégorie des challenges faciles on a choisi un challenge avec une seule machine
+Debian et contient trois flags. Le but principal de ce challenge est de découvrir un site
+web hébergé dans la machine Debian et qui contient des flags dans le serveur. Ce challenge
+permet à l’hacker d’utilisé des outils de sécurité basique et traditionnelle comme Hydra
+pour un brute force sur une page de login, reconnaissance en utilisant nmap ainsi que 
+l’utilisation des commandes de linux dans une ligne de commande en ligne.
+
+        Lors de ce challenge vous allez mettre en pratique plusieurs méthodes et outils afin de 
+résoudre le challenge. Parmi ces méthodes on a ; Reconnaissance qui est une étape traditionnelle,
+pour tous les challenges de type facile, qui permet à l’hacker d‘interagir avec le système cible
+pour collecter des informations sur ses vulnérabilités, d’énumération pour lister les différents
+répertoires et fichiers au niveau du port http en créant une connexion active avec le système 
+cible, Brute Forcing login qui va être utilisée pour trouver un mot de passe ou une clé. Il 
+s'agit de tester, une à une, toutes les combinaisons possibles. Ce type d’attaque fait en 
+utilisant plusieurs outils comme Hydra.
+
+
