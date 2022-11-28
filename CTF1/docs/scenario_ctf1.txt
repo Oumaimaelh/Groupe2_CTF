@@ -19,5 +19,13 @@ Brute Force le login et mot de passe dans le page login pour gagner d'accès de 
 Utiliser la ligne de commandes pour trouver le deuxième flag sous forme de fichier texte et le lire.
 
     1.2.3. Le troisième flag:
-Utiliser la ligne de commande pour récupérer un fichier png qui cache le troisième flag avec le chemin /home/user1. 
+Utiliser la ligne de commande pour récupérer un fichier png qui cache le troisième flag avec le chemin /home/user1.
+
+
+
+
+MD4(challenge@tomygrpCTF1_2022/2023)
+43154f1e21ffefa44c364f927016aa89
+
+Fonction de Hachage - dCode
 
