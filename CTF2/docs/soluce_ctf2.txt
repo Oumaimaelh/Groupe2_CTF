@@ -1,0 +1,20 @@
+Le premier flag :
+Reconnaissance afin de trouver flag1.txt et small-word-list.txt
+suivis par une énumération avec Gobuster avec la nouvelle 
+word-list pour accéder au site Wordpress.
+
+Les commandes et les résultats démonstratifs
+++++screen
+
+
+Le deuxième flag :
+Après avoir accéder au site Wordpress effectuez une injection SQL
+pour trouver le login et mot de passe qui seront utilisé pour 
+accéder à la deuxième machine (flag 2 utilisé comme un login et 
+Flag comme un mot de passe).
+
+Les commandes et les résultats démonstratifs
+++++screen
+
+
+Le troisième flag :
