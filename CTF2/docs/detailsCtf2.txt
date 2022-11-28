@@ -1,0 +1,17 @@
+Challenge2 : TomyRobot CTF
+Explication de ctf1 : 
+    Pour la catégorie des challenges moyenne/difficile nous avons 
+choisi TomyRobot CTF qui se fait en deux machines Debian. Pour
+parvenir à nos fins, il vous faudra capturer 6 flags à différents
+niveaux au cours de la résolution du challenge. En *** sur les 
+hints qui permet de vous aider afin de trouver les flags.
+    Pour la première machine héberge un site web avec base de données
+et un site wordpress (un système de gestion de contenus (CMS)) que
+le développeur a oublié à l’héberger. Le site web est vulnérable 
+au SQL Injection et le site de blog partage le mot de passe de 
+admin login avec le site, qui peut être piraté par SQLi. Dans cette
+machine, nous cachons les flags de 1 à 3, et aussi l'information 
+nécessaire pour accéder à la deuxième machine.
+    Pour la machine 2, vous pouvez obtenir dans le fichier known_hosts
+de la première machine mot de passe haché. Dans cette machine, il 
+existe plusieurs utilisateurs, respectivement existe le flag.
