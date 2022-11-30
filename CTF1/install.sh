@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt-get install nodejs -y
 sudo apt update
 sudo git clone --branch master https://github.com/Oumaimaelh/command_line.git
-sudo cd /command_line/
+cd /command_line/
 sudo npm install 
 sudo apt-get install gnupg -y
 sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
@@ -35,14 +35,13 @@ sudo a2enmod proxy proxy_http rewrite headers expires
 sudo touch /etc/apache2/sites-available/tomygrpCmd.com.conf
 sudo echo -e "<VirtualHost *:80> \n\tServerName tomygrpCmd.com \n\tServerAlias www.tomygrpCmd.com \n\tProxyRequests Off \n\tProxyPreserveHost On \n\tProxyVia Full \n\t<Proxy *> \n\t\tRequire all granted \n\t</Proxy> \n\tProxyPass / http://127.0.0.1:3000/ \n\tProxyPassReverse / http://127.0.0.1:30000/ \n</VirtualHost>" > /etc/apache2/sites-available/tomygrpCmd.com.conf
 sudo a2dissite 000-default
-sudo a2ensite example.com.conf
+sudo a2ensite tomygrpCmd.com.conf
 sudo systemctl restart apache2
 sudo npm install pm2 -g
 sudo pm2 start ./app.js --name tomygrpCmd.com
 sudo pm2 save
 sudo pm2 startup
 #si on a une erreur faut juste modifier le fichier de mongodb
-
 
 
 
