@@ -1,24 +1,28 @@
 #!/bin/bash
 
-apt update
-apt install apache2
-/etc/init.d/apache2 start
+touch scriptPasswd.sh
+sudo echo "echo 'debian:123' | chpasswd" > scriptPasswd.sh
+sudo chmod +x scriptPasswd.sh
+sudo ./scriptPasswd.sh
+sudo apt-get update
+sudo apt-get install apache2 -y
+sudo /etc/init.d/apache2 start
 #OpenRC est un remplaçant du démon init system permet à la configuration ses services et l’activation des services au démarrage
-apt-get install openrc 
-rc-update add apache2 default
-apt-get install git 
-Apt-get install npm
-sudo apt update
-sudo apt install nodejs
+sudo apt-get install openrc -y
+sudo rc-update add apache2 default
+sudo apt-get install git -y
+sudo apt-get install npm -y
+sudo apt-get update
+sudo apt-get install nodejs -y
 sudo apt update
 sudo git clone --branch master https://github.com/Oumaimaelh/command_line.git
 sudo cd command_line
-npm install 
-sudo apt-get install gnupg
-wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+sudo npm install 
+sudo apt-get install gnupg -y
+sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
 echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 sudo apt-get update
-sudo apt-get install -y mongodb-org
+sudo apt-get install mongodb-org -y
 echo "mongodb-org hold" | sudo dpkg --set-selections
 echo "mongodb-org-server hold" | sudo dpkg --set-selections
 echo "mongodb-org-shell hold" | sudo dpkg --set-selections
@@ -29,7 +33,7 @@ sudo systemctl start mongod
 sudo systemctl enable mongod
 sudo a2enmod proxy proxy_http rewrite headers expires
 sudo touch /etc/apache2/sites-available/tomygrpCmd.com.conf
-sudo echo "<VirtualHost *:80> \ServerName tomygrpCmd.com \ServerAlias www.tomygrpCmd.com \ProxyRequests Off \ProxyPreserveHost On \ProxyVia Full \<Proxy *> \Require all granted \</Proxy> \ProxyPass / http://127.0.0.1:3000/ \ProxyPassReverse / http://127.0.0.1:30000/ \</VirtualHost>" > /etc/apache2/sites-available/tomygrpCmd.com.conf
+sudo echo -e "<VirtualHost *:80> \n\tServerName tomygrpCmd.com \n\tServerAlias www.tomygrpCmd.com \n\tProxyRequests Off \n\tProxyPreserveHost On \n\tProxyVia Full \n\t<Proxy *> \n\t\tRequire all granted \n\t</Proxy> \n\tProxyPass / http://127.0.0.1:3000/ \n\tProxyPassReverse / http://127.0.0.1:30000/ \n</VirtualHost>" > /etc/apache2/sites-available/tomygrpCmd.com.conf
 sudo a2dissite 000-default
 sudo a2ensite example.com.conf
 sudo systemctl restart apache2
