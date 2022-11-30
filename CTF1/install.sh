@@ -11,7 +11,7 @@ Apt-get install npm
 sudo apt update
 sudo apt install nodejs
 sudo apt update
-sudo git clone --branch master ************************************************.git 
+sudo git clone --branch master https://github.com/Oumaimaelh/command_line.git
 sudo cd command_line
 npm install 
 sudo apt-get install gnupg
