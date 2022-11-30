@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt-get install nodejs -y
 sudo apt update
 sudo git clone --branch master https://github.com/Oumaimaelh/command_line.git
-sudo cd command_line
+sudo cd /command_line/
 sudo npm install 
 sudo apt-get install gnupg -y
 sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
