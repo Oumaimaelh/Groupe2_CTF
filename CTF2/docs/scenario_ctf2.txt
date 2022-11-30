@@ -12,8 +12,7 @@ Gobuster avec la nouvelle word-list pour accéder au site Wordpress.
 SQL Injection:
 Pour trouver le login et mdp(et un autre utilisateur : flag 2 comme login et Flag comme mdp).
 Wordpress:
-Trouver flag 3 dans la page admin du site Wordpress.
-Modifier le thème de la page 404.php pour lancer un reverse shell et accéder à la première machine.
+Se conneModifier le thème de la page 404.php pour lancer un reverse shell et accéder à la première machine.
 
 ** Dans Machine 1 : 
 Trouver un fichier user1file.txt qui n’est accessible que par user1 et qui contient flag 4 et le mdp de la deuxième machine(user1).
