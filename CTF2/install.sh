@@ -44,8 +44,8 @@ sudo cd wordpress-docker-compose | make autoinstall
 sudo apt update
 sudo apt install cron -y
 sudo systemctl enable cron
-#rc-update add cronie default
-sudo echo "/5 * * * * user2 /etc/cron.d/backup.sh" > /etc/crontab
+#rc-update add cron default
+sudo echo "*/5 * * * * user2 /home/user2/backup.sh" > /etc/crontab
 sudo mkdir /home/user2/data
 sudo mkdir /mnt/backup
 sudo touch /etc/cron.d/backup.sh
