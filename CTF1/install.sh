@@ -41,6 +41,8 @@ sudo npm install pm2 -g
 sudo pm2 start ./app.js --name tomygrpCmd.com
 sudo pm2 save
 sudo pm2 startup
+sudo npm install -g newman
+newman run Projet_Securite.postman_collection.json
 #si on a une erreur faut juste modifier le fichier de mongodb
 
 
