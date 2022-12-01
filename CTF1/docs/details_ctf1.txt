@@ -42,6 +42,13 @@ Reconnaissance et une énumération (@ip/flag1.php).
 
 
 
+Ctf 1 
+Flag 1
+Md5(Yes! You get it) = 3c7abd78f0f92410afc66fc00c0adcc4
+Flag 2
+Md5(That is great!) = 61a0a824765dc715d0af0f65ddbdf915
+ Flag 3
+Md5(You did it) = a98b5ce98ad49e5dba91a17652f49f4f
 
 
 
