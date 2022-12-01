@@ -19,4 +19,28 @@ La création de ce challenge s’est basée sur un ensemble des étapes cohéren
 disponible sur open stack et qui marche en basant sur *************signature key cert**********
 2. 
 
-Hachage du mot de passe en MD5(challenge@tomygrpCTF1_2022/2023      ==>    9b4d2280a5c530a3efbaae9c00eb0a3a). 
+Hachage du mot de passe en MD5(challenge@tomygrpCTF1_2022/2023      ==>    9b4d2280a5c530a3efbaae9c00eb0a3a).
+
+
+Ctf2
+
+Flag 1 
+
+Md5(This is the first one ) = f30c6e73b90818e134aec6d3fa28927d
+
+Flag 2
+Md5(Ohoh! The second one) = b1d2914c19a30b9afb2c71c27a4e274f
+
+Flag 3
+Md5(Here we go!) = 2afe596473c537a867ab734afa00b0fe
+
+Flag4
+Md5(This is the fourth one) = 8f3dbcbb884d161fb6eade138ed8c32e
+
+Flag 5
+Md5(You are genius!) = 08a5c806df767c60c7c42caf0e8f7ab8
+
+Flag 6
+Md5(Finally the last one) = fb826bcae2e33538bc3e3d430430ae32
+
+
