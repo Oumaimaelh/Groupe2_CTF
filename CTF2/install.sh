@@ -35,7 +35,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo docker run hello-world
 
 #from wordpress on github
-sudo git clone https://github.com/kassambara/wordpress-docker-compose
+sudo git clone https://github.com/mouhssineEL/wordpress-docker-compose.git
 sudo cd wordpress-docker-compose | sudo chown $USER /var/run/docker.sock 
 sudo cd wordpress-docker-compose | make autoinstall
 
