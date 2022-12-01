@@ -13,7 +13,7 @@ sudo ./scriptPasswdUser2.sh
 
 
 sudo systemctl enable ssh
-
+sudo apt-get install make
 # les commandes de la partie Wordpress
 ##############################################################################################################
 # I) Tools of WP
@@ -36,10 +36,10 @@ sudo docker run hello-world
 
 #from wordpress on github
 sudo git clone https://github.com/mouhssineEL/wordpress-docker-compose.git
-sudo cd wordpress-docker-compose | sudo chown $USER /var/run/docker.sock 
-sudo cd wordpress-docker-compose | make autoinstall
-
-
+sudo cd wordpress-docker-compose 
+sudo chown $USER /var/run/docker.sock 
+sudo cd wordpress-docker-compose
+make autoinstall
 ##############################################################################################################
 sudo apt update
 sudo apt install cron -y
