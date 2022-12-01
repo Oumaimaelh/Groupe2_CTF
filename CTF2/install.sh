@@ -5,9 +5,12 @@ sudo echo "echo 'debian:123' | chpasswd" > scriptPasswd.sh
 sudo chmod +x scriptPasswd.sh
 sudo ./scriptPasswd.sh
 
+touch scriptPasswdUser2.sh
 sudo adduser user2
-sudo passwd user2
-#comment lui a affecté un mdp
+sudo echo "echo 'user2:123' | chpasswd" > scriptPasswdUser2.sh
+sudo chmod +x scriptPasswdUser2.sh
+sudo ./scriptPasswdUser2.sh
+
 
 sudo systemctl enable ssh
 
