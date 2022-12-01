@@ -1,9 +1,15 @@
 #!/bin/bash
 
-Sudo adduser user2
+touch scriptPasswd.sh
+sudo echo "echo 'debian:123' | chpasswd" > scriptPasswd.sh
+sudo chmod +x scriptPasswd.sh
+sudo ./scriptPasswd.sh
+
+sudo adduser user2
 sudo passwd user2
 #comment lui a affecté un mdp
 
+sudo systemctl enable ssh
 
 # les commandes de la partie Wordpress
 ##############################################################################################################
