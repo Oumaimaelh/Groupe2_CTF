@@ -66,12 +66,11 @@ sudo cp private /wordpress_docker/wordpress
 
 #Hint for next machine
 sudo su -c "echo 'tomy{8f3dbcbb884d161fb6eade138ed8c32e}' > /home/knight/flag4.txt" knight
-sudo chmod +600 /home/knight/flag4.txt
+sudo chmod 600 /home/knight/flag4.txt
 sudo su -c "echo 'bishop - 02719440e19a8e087f16d1124defc9ace9e29b29' > /home/knight/login.txt" knight
-sudo chmod +600 /home/knight/flag4.txt
+sudo chmod 600 /home/knight/flag4.txt
 #Remove scripts
 cd 
-
 sudo rm scriptPasswdUser1.sh
 sudo rm scriptPasswd.sh
-sudo rm machine1.sh
+sudo rm machine1.sh*
