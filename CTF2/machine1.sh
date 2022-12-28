@@ -12,8 +12,8 @@ sudo useradd -m -s /bin/bash knight
 sudo echo "echo 'knight:@s3cur3mdp' | chpasswd" > scriptPasswdUser1.sh
 sudo chmod +x scriptPasswdUser1.sh
 sudo ./scriptPasswdUser1.sh
-sudo su -c 'mkdir /home/knight/.ssh' user1
-sudo su -c 'touch /home/knight/.ssh/known_hosts' user1
+sudo su -c 'mkdir /home/knight/.ssh' knight
+sudo su -c 'touch /home/knight/.ssh/known_hosts' knight
 sudo su -c "echo '172.30.150.12 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJwpC+ZDI9efM4CE98bzlg1O349YvPjGXP9IRtkpi9JnAyxloN+hdXyljAuP0vCnUauxfbYC1QUlYM4QFLOiP5w=' > /home/knight/.ssh/known_hosts" knight
 
 sudo systemctl enable ssh
