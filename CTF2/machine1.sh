@@ -3,7 +3,7 @@
 #Creating user
 cd
 touch scriptPasswd.sh
-sudo echo "echo 'debian:123' | chpasswd" > scriptPasswd.sh
+sudo echo "echo 'debian:tomygrpsecur3' | chpasswd" > scriptPasswd.sh
 sudo chmod +x scriptPasswd.sh
 sudo ./scriptPasswd.sh
 
@@ -17,7 +17,7 @@ sudo su -c 'touch /home/knight/.ssh/known_hosts' knight
 sudo su -c "echo '172.30.150.12 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJwpC+ZDI9efM4CE98bzlg1O349YvPjGXP9IRtkpi9JnAyxloN+hdXyljAuP0vCnUauxfbYC1QUlYM4QFLOiP5w=' > /home/knight/.ssh/known_hosts" knight
 
 sudo systemctl enable ssh
-sudo apt-get install make
+sudo apt-get install make -y
 
 # les commandes de la partie Wordpress
 ##############################################################################################################
