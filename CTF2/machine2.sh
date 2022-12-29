@@ -42,11 +42,12 @@ sudo chmod o+w
 
 sudo echo "*/5 * * * * rook /home/rook/backup.sh" | sudo tee -a /etc/crontab
 sudo su -c 'mkdir /home/rook/data' rook
-sudo su -c 'mkdir /mnt/backup' rook
+sudo su -c 'touch /home/rook/data/test_backup' rook
+sudo su -c 'mkdir /home/rook/backup' rook
 sudo su -c 'touch /home/rook/backup.sh' rook
-sudo su -c  "echo 'tomy{Cr0n_i5_g0n3}' > /home/rook/flag5.txt" rook
-sudo chmod 600 /home/rook/flag5.txt
-sudo su -c  "echo -e '#!/bin/bash \ncp -r /home/rook/data /mnt/backup' > /home/rook/backup.sh" rook
+sudo su -c  "echo 'tomy{Cr0n_i5_g0n3}' > /home/rook/data/flag5.txt" rook
+sudo chmod 600 /home/rook/data/flag5.txt
+sudo su -c  "echo -e '#!/bin/bash \ncp -r /home/rook/data /home/rook/backup' > /home/rook/backup.sh" rook
 sudo chmod 777 /home/rook/backup.sh
 sudo /etc/init.d/cron start
 
@@ -60,18 +61,20 @@ sudo su -c "echo -e 'Is this the real life?\nIs this just fantasy?' > /home/quee
 sudo chmod 666 /home/queen/msg
 sudo su -c  "echo 'tomy{Path_Variable_6}' > /home/queen/flag6.txt" queen
 sudo chmod 600 /home/queen/flag6.txt
-sudo su -c  "echo 'Login for the last stage: pawn - timetopromote' > /home/queen/next.txt" queen
-sudo chmod 600 /home/queen/next.txt
+sudo su -c  "echo 'Login for the last stage: pawn - timetopromote' > /home/queen/next" queen
+sudo chmod 600 /home/queen/next
 
 sudo rm queenscript.c
 
 ########################BUFFER OVERFLOW#######################################
 cd /home/pawn
 
+sudo apt-get install gcc-multilib -y
 sudo wget https://raw.githubusercontent.com/thanhnguyen287/SQL-Vulnerable/main/sneaky.c
 sudo echo "0" | sudo tee /proc/sys/kernel/randomize_va_space
-sudo gcc -z execstack -fno-stack-protector -m32 --no-pie -o mount_pwn sneaky.c
+sudo gcc -z execstack -fno-stack-protector -m32 -no-pie -o mount_pwn sneaky.c
 sudo chmod u+s mount_pwn
 sudo echo "tomy{pawn_r00t_fl4g}" | sudo tee /root/flag_root.txt
+sudo rm sneaky.c*
 
 
