@@ -25,6 +25,12 @@ sudo echo "echo 'queen:tomygroup' | chpasswd" > scriptPasswdUser3.sh
 sudo chmod +x scriptPasswdUser3.sh
 sudo ./scriptPasswdUser3.sh
 
+touch scriptPasswdUser4.sh
+sudo useradd -m -s /bin/bash pawn
+sudo echo "echo 'pawn:timetopromote' | chpasswd" > scriptPasswdUser4.sh
+sudo chmod +x scriptPasswdUser4.sh
+sudo ./scriptPasswdUser4.sh
+
 sudo systemctl enable ssh
 
 #########################CRONTAB VULN######################################
@@ -46,6 +52,7 @@ sudo /etc/init.d/cron start
 
 ########################PATH VARIABLE VULN#######################################
 cd /home/queen
+sudo apt install gcc -y
 sudo su -c 'wget https://raw.githubusercontent.com/thanhnguyen287/SQL-Vulnerable/main/queenscript.c' queen
 sudo su -c 'gcc -o reveal queenscript.c' queen
 sudo su -c 'chmod u+s reveal' queen
@@ -53,14 +60,17 @@ sudo su -c "echo -e 'Is this the real life?\nIs this just fantasy?' > /home/quee
 sudo chmod 666 /home/queen/msg
 sudo su -c  "echo 'tomy{Path_Variable_6}' > /home/queen/flag6.txt" queen
 sudo chmod 600 /home/queen/flag6.txt
+sudo su -c  "echo 'Login for the last stage: pawn - timetopromote' > /home/queen/next.txt" queen
+sudo chmod 600 /home/queen/next.txt
 
 sudo rm queenscript.c
 
 ########################BUFFER OVERFLOW#######################################
-cd /
-sudo wget https://github.com/thanhnguyen287/SQL-Vulnerable/blob/main/mount_pwn?raw=true
-sudo mv 'mount_pwn?raw=true' mount_pwn
+cd /home/pawn
+
+sudo wget https://raw.githubusercontent.com/thanhnguyen287/SQL-Vulnerable/main/sneaky.c
 sudo echo "0" | sudo tee /proc/sys/kernel/randomize_va_space
+sudo gcc -z execstack -fno-stack-protector -m32 --no-pie -o mount_pwn sneaky.c
 sudo chmod u+s mount_pwn
 sudo echo "tomy{pawn_r00t_fl4g}" | sudo tee /root/flag_root.txt
 
