@@ -3,7 +3,7 @@
 #Creating user
 cd
 touch scriptPasswd.sh
-sudo echo "echo 'debian:123' | chpasswd" > scriptPasswd.sh
+sudo echo "echo 'debian:tomygrpsecur3' | chpasswd" > scriptPasswd.sh
 sudo chmod +x scriptPasswd.sh
 sudo ./scriptPasswd.sh
 
@@ -15,7 +15,7 @@ sudo ./scriptPasswdUser1.sh
 
 touch scriptPasswdUser2.sh
 sudo useradd -m -s /bin/bash rook
-sudo echo "echo 'rook:hijohn' | chpasswd" > scriptPasswdUser2.sh
+sudo echo "echo 'rook:scarycronnie' | chpasswd" > scriptPasswdUser2.sh
 sudo chmod +x scriptPasswdUser2.sh
 sudo ./scriptPasswdUser2.sh
 
