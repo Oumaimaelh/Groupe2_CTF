@@ -76,5 +76,6 @@ sudo gcc -z execstack -fno-stack-protector -m32 -no-pie -o mount_pwn sneaky.c
 sudo chmod u+s mount_pwn
 sudo echo "tomy{pawn_r00t_fl4g}" | sudo tee /root/flag_root.txt
 sudo rm sneaky.c*
+sudo su -c 'chmod 750 /home/pawn' pawn
 
 
