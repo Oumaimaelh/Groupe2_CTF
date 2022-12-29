@@ -18,7 +18,7 @@ sudo su -c "echo '172.30.150.12 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAy
 
 sudo systemctl enable ssh
 sudo apt-get install make -y
-
+sudo apt install git -y
 # les commandes de la partie Wordpress
 ##############################################################################################################
 # I) Tools of WP
@@ -48,7 +48,6 @@ make autoinstall
 
 #Onion web Sqli
 cd
-sudo apt install git
 git clone https://github.com/thanhnguyen287/SQL-Vulnerable.git
 cd SQL-Vulnerable
 sudo apt-get install python3-pip -y
