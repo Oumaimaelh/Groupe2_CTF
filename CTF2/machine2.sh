@@ -64,7 +64,7 @@ sudo chmod 600 /home/queen/flag6.txt
 sudo su -c  "echo 'Login for the last stage: pawn - timetopromote' > /home/queen/next" queen
 sudo chmod 600 /home/queen/next
 
-sudo rm queenscript.c
+sudo rm queenscript.c*
 
 ########################BUFFER OVERFLOW#######################################
 cd /home/pawn
@@ -77,5 +77,11 @@ sudo chmod u+s mount_pwn
 sudo echo "tomy{pawn_r00t_fl4g}" | sudo tee /root/flag_root.txt
 sudo rm sneaky.c*
 sudo su -c 'chmod 750 /home/pawn' pawn
+
+
+##########################Clean up ###########################################
+cd
+sudo rm scriptPasswd*
+sudo rm *machine2.sh*
 
 
