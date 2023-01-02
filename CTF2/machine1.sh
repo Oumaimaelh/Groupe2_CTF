@@ -74,4 +74,11 @@ sudo chmod 600 /home/knight/login.txt
 cd 
 sudo rm scriptPasswdUser1.sh
 sudo rm scriptPasswd.sh
-sudo rm machine1.sh*
+sudo rm /home/debian/SQL-Vulnerable/msg
+sudo rm /home/debian/SQL-Vulnerable/private
+sudo rm /home/debian/SQL-Vulnerable/public
+sudo rm /home/debian/SQL-Vulnerable/queenscript.c
+sudo rm /home/debian/SQL-Vulnerable/machine1.sh
+sudo rm /home/debian/SQL-Vulnerable/mount_pwn
+sudo rm /home/debian/SQL-Vulnerable/sneaky.c
+sudo rm *machine1.sh*
