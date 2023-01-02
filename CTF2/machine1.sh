@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#Change hostname
-#sudo hostnamectl set-hostname "tomyrobot"
-#sudo echo "127.0.1.1 tomyrobot.novalocal tomyrobot" | sudo tee -a /etc/hosts
-
 #Creating user
 cd
 touch scriptPasswd.sh
@@ -44,7 +40,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose -y
 sudo docker run hello-world
 
 #from wordpress on github
-sudo git clone https://github.com/mouhssineEL/wordpress-docker-compose.git
+#sudo git clone https://github.com/mouhssineEL/wordpress-docker-compose.git
+sudo git clone https://github.com/mouhssineEL/wordpress_docker
 sudo cd wordpress-docker-compose 
 sudo chown $USER /var/run/docker.sock 
 sudo cd wordpress-docker-compose
@@ -61,7 +58,6 @@ python3 -m pip install email_validator
 sudo cp flask.service /etc/systemd/system/
 chmod +x flask.sh
 sudo systemctl enable flask.service
-sudo systemctl start flask.service
 
 #Webshell login PGP
 sudo cp msg /wordpress_docker/wordpress
@@ -77,12 +73,4 @@ sudo chmod 600 /home/knight/login.txt
 cd 
 sudo rm scriptPasswdUser1.sh
 sudo rm scriptPasswd.sh
-sudo rm /home/debian/SQL-Vulnerable/msg
-sudo rm /home/debian/SQL-Vulnerable/private
-sudo rm /home/debian/SQL-Vulnerable/public
-sudo rm /home/debian/SQL-Vulnerable/queenscript.c
-sudo rm /home/debian/SQL-Vulnerable/machine1.sh
-sudo rm /home/debian/SQL-Vulnerable/mount_pwn
-sudo rm /home/debian/SQL-Vulnerable/sneaky.c
-sudo rm *machine1.sh*
-
+sudo rm machine1.sh*
