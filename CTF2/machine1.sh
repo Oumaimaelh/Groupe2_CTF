@@ -58,6 +58,7 @@ python3 -m pip install email_validator
 sudo cp flask.service /etc/systemd/system/
 chmod +x flask.sh
 sudo systemctl enable flask.service
+sudo systemctl start flask.service
 
 #Webshell login PGP
 sudo cp msg /wordpress_docker/wordpress
