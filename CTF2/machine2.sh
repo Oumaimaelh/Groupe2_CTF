@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #Change hostname
-sudo hostnamectl set-hostname "chessboard"
-sudo echo "127.0.1.1 chessboard.novalocal chessboard" | sudo tee -a /etc/hosts
+#sudo hostnamectl set-hostname "chessboard"
+#sudo echo "127.0.1.1 chessboard.novalocal chessboard" | sudo tee -a /etc/hosts
 
 #Creating user
 cd

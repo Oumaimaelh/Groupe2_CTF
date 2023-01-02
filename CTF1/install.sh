@@ -1,4 +1,7 @@
 #!/bin/bash
+#Change hostname
+sudo hostnamectl set-hostname "easypeasy"
+sudo echo "127.0.1.1 easypeasy.novalocal easypeasy" | sudo tee -a /etc/hosts
 
 touch scriptPasswd.sh
 sudo echo "echo 'debian:123' | chpasswd" > scriptPasswd.sh

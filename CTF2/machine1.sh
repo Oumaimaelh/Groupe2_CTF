@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Change hostname
+#sudo hostnamectl set-hostname "tomyrobot"
+#sudo echo "127.0.1.1 tomyrobot.novalocal tomyrobot" | sudo tee -a /etc/hosts
+
 #Creating user
 cd
 touch scriptPasswd.sh
@@ -57,6 +61,7 @@ python3 -m pip install email_validator
 sudo cp flask.service /etc/systemd/system/
 chmod +x flask.sh
 sudo systemctl enable flask.service
+sudo systemctl start flask.service
 
 #Webshell login PGP
 sudo cp msg /wordpress_docker/wordpress
@@ -72,4 +77,12 @@ sudo chmod 600 /home/knight/login.txt
 cd 
 sudo rm scriptPasswdUser1.sh
 sudo rm scriptPasswd.sh
-sudo rm machine1.sh*
+sudo rm /home/debian/SQL-Vulnerable/msg
+sudo rm /home/debian/SQL-Vulnerable/private
+sudo rm /home/debian/SQL-Vulnerable/public
+sudo rm /home/debian/SQL-Vulnerable/queenscript.c
+sudo rm /home/debian/SQL-Vulnerable/machine1.sh
+sudo rm /home/debian/SQL-Vulnerable/mount_pwn
+sudo rm /home/debian/SQL-Vulnerable/sneaky.c
+sudo rm *machine1.sh*
+
