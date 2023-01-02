@@ -23,6 +23,7 @@ sudo apt install git -y
 ##############################################################################################################
 # I) Tools of WP
 # Installation de docker 
+cd /
 sudo apt-get remove docker docker-engine docker.io containerd runc 
 #Install using the repository
 sudo apt-get update
@@ -44,6 +45,7 @@ sudo docker run hello-world
 sudo git clone https://github.com/mouhssineEL/wordpress_docker
 sudo cd wordpress-docker-compose 
 sudo chown $USER /var/run/docker.sock 
+#chown $USER /var/run/docker.sock
 sudo cd wordpress-docker-compose
 make autoinstall
 
