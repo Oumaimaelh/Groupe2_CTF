@@ -48,7 +48,7 @@ sudo npm install -g newman
 newman run Projet_Securite.postman_collection.json
 #si on a une erreur faut juste modifier le fichier de mongodb
 
-sudo rm /scriptPasswd.sh
+sudo rm -rf /scriptPasswd.sh
 
 
 
