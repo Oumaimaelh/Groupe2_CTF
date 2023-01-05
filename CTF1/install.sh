@@ -4,7 +4,7 @@
 #sudo echo "127.0.1.1 easypeasy.novalocal easypeasy" | sudo tee -a /etc/hosts
 
 touch scriptPasswd.sh
-sudo echo "echo 'debian:123' | chpasswd" > scriptPasswd.sh
+sudo echo "echo 'debian:tomyctf2023' | chpasswd" > scriptPasswd.sh
 sudo chmod +x scriptPasswd.sh
 sudo ./scriptPasswd.sh
 sudo apt-get update
@@ -47,6 +47,8 @@ sudo pm2 startup
 sudo npm install -g newman
 newman run Projet_Securite.postman_collection.json
 #si on a une erreur faut juste modifier le fichier de mongodb
+
+sudo rm /scriptPasswd.sh
 
 
 
