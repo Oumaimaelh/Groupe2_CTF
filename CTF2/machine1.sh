@@ -45,7 +45,7 @@ sudo git clone https://github.com/mouhssineEL/wordpress_docker
 sudo cd wordpress_docker
 sudo chown $USER /var/run/docker.sock 
 #chown $USER /var/run/docker.sock
-sudo cd wordpress-docker-compose
+sudo cd wordpress_docker
 make autoinstall
 
 #Onion web Sqli
