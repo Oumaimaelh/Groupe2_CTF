@@ -21,7 +21,6 @@ sudo apt-get install make -y
 sudo apt install git -y
 # les commandes de la partie Wordpress
 ##############################################################################################################
-# I) Tools of WP
 # Installation de docker 
 cd /
 sudo apt-get remove docker docker-engine docker.io containerd runc 
@@ -43,7 +42,7 @@ sudo docker run hello-world
 #from wordpress on github
 #sudo git clone https://github.com/mouhssineEL/wordpress-docker-compose.git
 sudo git clone https://github.com/mouhssineEL/wordpress_docker
-sudo cd wordpress-docker-compose 
+sudo cd wordpress_docker
 sudo chown $USER /var/run/docker.sock 
 #chown $USER /var/run/docker.sock
 sudo cd wordpress-docker-compose
