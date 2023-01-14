@@ -35,6 +35,12 @@ sudo echo "echo 'pawn:timetopromote' | chpasswd" > scriptPasswdUser4.sh
 sudo chmod +x scriptPasswdUser4.sh
 sudo ./scriptPasswdUser4.sh
 
+touch scriptPasswdUser5.sh
+sudo useradd -m -s /bin/bash king
+sudo echo "echo 'pawn:snakeoil' | chpasswd" > scriptPasswdUser5.sh
+sudo chmod +x scriptPasswdUser5.sh
+sudo ./scriptPasswdUser5.sh
+
 sudo systemctl enable ssh
 
 #########################CRONTAB VULN######################################
@@ -69,6 +75,9 @@ sudo su -c  "echo 'Login for the last stage: pawn - timetopromote' > /home/queen
 sudo chmod 600 /home/queen/next
 
 sudo rm queenscript.c*
+
+########################SNAKE OIL CRYPTOGRAPHY#################################
+
 
 ########################BUFFER OVERFLOW#######################################
 cd /home/pawn
