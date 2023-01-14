@@ -40,7 +40,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose -y
 sudo docker run hello-world
 
 #from wordpress on github
-#sudo git clone https://github.com/mouhssineEL/wordpress-docker-compose.git
+
 sudo git clone https://github.com/mouhssineEL/wordpress_docker
 sudo cd wordpress_docker
 sudo chown $USER /var/run/docker.sock 
