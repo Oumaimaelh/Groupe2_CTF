@@ -77,9 +77,10 @@ sudo chmod 600 /home/queen/next
 sudo rm queenscript.c*
 
 ########################SNAKE OIL CRYPTOGRAPHY#################################
-sudo apt-get install gnupg
+sudo apt-get install gnupg -y
 sudo su -c  "echo 'tomy{Snake_Oil_Crypto}' > /home/king/flag7.txt" king
-echo scytale2023 | gpg -c --batch --yes --passphrase-fd 0 /home/king/flag5.txt
+#weaeeaete c !s alyks silloectpse udyhh 2d  ters0octa ac2nrhlpsy3
+sudo su -c  "echo scytale2023 | gpg -c --batch --yes --passphrase-fd 0 /home/king/flag7.txt" king
 sudo rm /home/king/flag7.txt
 
 ########################BUFFER OVERFLOW#######################################
