@@ -37,7 +37,7 @@ sudo ./scriptPasswdUser4.sh
 
 touch scriptPasswdUser5.sh
 sudo useradd -m -s /bin/bash king
-sudo echo "echo 'pawn:snakeoil' | chpasswd" > scriptPasswdUser5.sh
+sudo echo "echo 'king:snakeoil' | chpasswd" > scriptPasswdUser5.sh
 sudo chmod +x scriptPasswdUser5.sh
 sudo ./scriptPasswdUser5.sh
 
