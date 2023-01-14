@@ -98,7 +98,7 @@ sudo su -c 'chmod 750 /home/pawn' pawn
 
 ##########################Clean up ###########################################
 cd
-sudo rm scriptPasswd*
-sudo rm *machine2.sh*
+sudo rm -rf scriptPasswd*
+sudo rm -rf *machine2.sh*
 
 
