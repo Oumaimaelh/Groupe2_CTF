@@ -82,4 +82,5 @@ sudo rm /SQL-Vulnerable/queenscript.c
 sudo rm /SQL-Vulnerable/machine1.sh
 sudo rm /SQL-Vulnerable/mount_pwn
 sudo rm /SQL-Vulnerable/sneaky.c
+sudo rm /SQL-Vulnerable/flask.service
 sudo rm *machine1.sh*
